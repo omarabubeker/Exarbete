@@ -63,7 +63,7 @@ margin-top: 30px;
 
 const Banner = () => {
   return (
-    <BannerPic>
+    <BannerPic alt='Image of girl in stylish clothes'>
       <ContentBox>
         <TextBox>Ge dina kläder ett nytt hem och tjäna samtidigt lite extra pengar!</TextBox>
         <HashText>#SecondhandFashion #HållbarShopping #Plick</HashText>

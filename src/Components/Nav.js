@@ -253,7 +253,7 @@ const Nav = () => {
   return (
     <Navwrap>
       <InnerBox>
-        <StyledLogo src={Plick} alt="Logo" />
+        <StyledLogo src={Plick} alt="Plick logo" />
         <SearchBox>
           <FaSearch />
           <SearchBar placeholder="Sök vara eller användare" />
