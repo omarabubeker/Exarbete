@@ -6,7 +6,7 @@ import './../Fonts.css'
 const BannerPic = styled.div`
   background-image: url(${BannerImg});
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   height: 65vh;
   position: relative;
 `;
@@ -15,7 +15,7 @@ const ContentBox = styled.div`
   width: 50vw;
   position: absolute;
   padding: 50px;
-  z-index: 999;
+  z-index: 99;
   color: #ffffff;
   text-align: left;
   display: flex;

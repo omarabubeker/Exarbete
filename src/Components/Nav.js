@@ -193,26 +193,27 @@ const HamburgerMenu = styled(FaBars)`
 `;
 
 const MobileMenu = styled.div`
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: baseline;
   width: fit-content;
-  position: absolute;
-  z-index: 9999;
+  position: fixed;
+  z-index: 999;
   background-color: #fff;
   top: 20%;
   left: 0;
+  height: 100%;
   padding: 20px;
+  transform: translateX(-100%);
+  transition: transform .5s ease-in-out;
+
+  &.open {
+    transform: translateX(0);
+  }
 
   @media (min-width: 800px) {
     display: none;
   }
-
-  ${(props) =>
-    props.show &&
-    `
-    display: flex;
-  `}
 `;
 
 const Nav = () => {
@@ -287,7 +288,7 @@ const Nav = () => {
           </MenuItem>
         ))}
       </LowerBox>
-      <MobileMenu show={mobileMenuOpen}>
+      <MobileMenu className={mobileMenuOpen ? "open" : ""}>
         {menuItems.map((item, index) => (
           <MenuItem key={index} onClick={() => toggleDropdown(index)}>
             {item.text}
